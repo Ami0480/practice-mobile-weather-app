@@ -4,10 +4,74 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
     <title>Mobile Weather App</title>
   </head>
   <body>
-    <div class="container"><h1>Hello</h1></div>
+    <div class="container">
+      <form>
+        <input
+          type="search"
+          placeholder="Enter a city.."
+          class="search-form-input"
+          required
+        />
+        <input type="submit" value="search" class="submit-button" />
+      </form>
+      <h1>Perth</h1>
+      <div class="display-temperature">
+        <h2>20</h2>
+        <span class="c">°C</span>
+      </div>
+
+      <img
+        src="https://openweathermap.org/img/wn/01d@2x.png"
+        class="weather-icon"
+      />
+      <p class="description">Sunny day</p>
+      <div class="forecast-weathers">
+        <div class="forecast-icons-left">
+          <p class="forecast-description">Mon</p>
+          <img
+            src="https://openweathermap.org/img/wn/01d@2x.png"
+            class="forecast-icon"
+          />
+        </div>
+        <div class="forecast-icons">
+          <p class="forecast-description">Tue</p>
+          <img
+            src="https://openweathermap.org/img/wn/01d@2x.png"
+            class="forecast-icon"
+          />
+        </div>
+        <div class="forecast-icons">
+          <p class="forecast-description">Wed</p>
+          <img
+            src="https://openweathermap.org/img/wn/01d@2x.png"
+            class="forecast-icon"
+          />
+        </div>
+        <div class="forecast-icons">
+          <p class="forecast-description">Thu</p>
+          <img
+            src="https://openweathermap.org/img/wn/01d@2x.png"
+            class="forecast-icon"
+          />
+        </div>
+        <div class="forecast-icons">
+          <p class="forecast-description">Fri</p>
+          <img
+            src="https://openweathermap.org/img/wn/01d@2x.png"
+            class="forecast-icon"
+          />
+        </div>
+      </div>
+    </div>
   </body>
   <script src="src/index.js"></script>
 </html>
