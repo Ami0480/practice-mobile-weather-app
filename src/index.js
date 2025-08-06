@@ -71,13 +71,17 @@ function displayCity(city) {
   let apiKey = "d1193959d2d841ec7555416d715716a6";
   let currentWeatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   let forecastWeatherApiUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+
+  document.querySelector("#loading").style.display = "block";
+
   axios.get(currentWeatherApiUrl).then(showElement);
   axios
     .get(forecastWeatherApiUrl)
     .then(forecastShowElement)
     .catch(() => {
       alert("City not found. Please check the spelling..");
-    });
+    })
+    .finally(() => (document.querySelector("#loading").style.display = "none"));
 }
 
 function searchForCity(event) {
